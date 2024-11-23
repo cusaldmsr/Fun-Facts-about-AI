@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun AI Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun AI Facts</h1>
+        <p id="fact">Click the button to learn a fun fact about AI!</p>
+        <button onclick="showRandomFact()">Show Fun Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "AI has been used in video games since the 1950s.",
+            "AI can create art, music, and even write poetry.",
+            "NASA uses AI to help with space exploration.",
+            "AI can translate languages in real-time.",
+            "AI is being used to diagnose diseases and personalize treatment plans.",
+            "Virtual assistants like Siri, Alexa, and Google Assistant use AI.",
+            "Self-driving cars use AI to navigate roads.",
+            "In 1997, IBM's Deep Blue defeated world chess champion Garry Kasparov.",
+            "Many companies use AI chatbots for customer service inquiries.",
+            "AI algorithms are behind personalized recommendations on platforms like Netflix."
+        ];
+
+        function showRandomFact() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('fact').innerText = facts[randomIndex];
+        }
+    </script>
+</body>
+</html>
